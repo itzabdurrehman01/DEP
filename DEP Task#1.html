@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Abdur Rehman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: url('background.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 2em 0;
+            position: relative;
+        }
+
+        header nav {
+            position: absolute;
+            margin-left: 80%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0); 
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+            padding: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .profile-pic img {
+            margin-right: 65%;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .intro h1 {
+            margin-right: 65%;
+            font-size: 2em;
+        }
+
+        .intro p {
+            margin-right: 65%;
+            font-size: 1.2em;
+        }
+
+        .btn {
+            margin-right: 65%;
+            background-color: #ff5733;
+            color: white;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul.left {
+            margin-right: auto;
+        }
+
+        nav ul.right {
+            margin-left: auto;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+
+        .flex-container section {
+            flex: 1 1 300px;
+            background-color: white;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flex-container h2 {
+            margin-top: 0;
+        }
+
+        #my-resume {
+            background-color: rgb(255, 255, 255);
+            padding: 2em;
+            border-radius: 5px;
+            margin-top: 2em;
+        }
+
+        .resume-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+
+        .resume-section {
+            flex: 1 1 300px;
+            background-color: white;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-section h3 {
+            margin-top: 0;
+        }
+
+        .skills-container, .languages-container, .education-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skills-container .progress-bar {
+            margin-bottom: 1em;
+        }
+
+        .languages-container, .education-container {
+            margin-bottom: 2em;
+        }
+
+        .progress-bar {
+            background-color: #ddd;
+            border-radius: 20px;
+            position: relative;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background-color: #ff6f61;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .progress-bar span::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 10px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        #freelance {
+            text-align: center;
+            background-color: #616161;
+            color: white;
+            padding: 2em 0;
+        }
+
+        .btn-hire {
+            background-color: #ff5733;
+            color: white;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #contact-form {
+            background-color: white;
+            padding: 2em;
+            margin: 2em 15%;
+            border-radius: 5px;
+        }
+
+        #contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        #contact-form input, #contact-form textarea, #contact-form button {
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact-form button {
+            background-color: #ff5733;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        footer {
+            background-color:  #616161;
+            color: white;
+            padding: 2em 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer-content div {
+            flex: 1;
+            margin: 1em;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-content ul li {
+            margin: 0.5em 0;
+        }
+
+        .footer-content ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links a img {
+            width: 24px;
+            height: 24px;
+            margin: 0 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="github.png" alt="GitHub"></a></li>
+                <li><a href="#"><img src="linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="instagram.jpg" alt="Instagram"></a></li>
+            </ul>
+        </nav>
+        <div class="profile-pic">
+            <img src="Profile.jpg" alt="Muhammad Abdur Rehman">
+        </div>
+        <div class="intro">
+            <h1>Muhammad Abdur Rehman</h1>
+            <p>C++ | C#</p>
+            <a href="Resume.pdf" class="btn" download>Resume</a>
+        </div>
+    </header>
+    <nav>
+        <ul class="left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 align="center">My Personal Information</h1>
+
+        <div class="flex-container">
+            <section id="who-am-i">
+                <h2>Who am I?</h2>
+                <p>I am a passionate web developer and dedicated IT engineer. With a strong foundation in programming and a love for creative problem-solving, I strive to build engaging and user-friendly websites. Eager to learn and adapt in this ever-evolving field.</p>
+            </section>
+            <section id="personal-info">
+                <h2>Personal Info</h2>
+                <ul>
+                    <li><b>Date of Birth:</b> 30/08/2004</li>
+                    <li><b>Email:</b> <a href="mailto:abdurrehmanrajpoot001@gmail.com">abdurrehmanrajpoot001@gmail.com</a></li>
+                    <li><b>Phone:</b> +923034563729</li>
+                    <li><b>Address:</b> Islamabad, Pakistan</li>
+                </ul>
+            </section>
+            <section id="my-expertise">
+                <h2>My Expertise</h2>
+                <h3>C++</h3>
+                <p>Proficient in building software using procedural and object-oriented paradigms. Experienced with pointers, memory management, and data structures. Developed various applications focusing on speed, efficiency, and scalability.</p>
+                <h3>C#</h3>
+                <p>Experienced with back-end programming, including controllers, data processing, and integrations. Created efficient solutions for enterprise-level systems, focusing on maintainability and performance. Adept at debugging and optimizing code for better user experience.</p>
+            </section>
+        </div>
+
+        <h1 align="center">My Resume</h1>
+
+        <section id="my-resume">
+            <div class="resume-container">
+                <div class="resume-section languages-container">
+                    <h3>Languages</h3>
+                    <p><b>Urdu:</b> I am fluent in Urdu, my native language, allowing effective communication and cultural understanding.</p>
+                    <p><b>English:</b> I possess a strong command of English, which enables me to engage confidently in diverse contexts.</p>
+                </div>
+                <div class="resume-section education-container">
+                    <h3>Education</h3>
+                    <p><b>2023 - Present</b><br>BS Computer Science<br>Pursuing a BS in Computer Science at Air University Islamabad, gaining comprehensive knowledge of algorithms, software engineering, and data structures.</p>
+                    <p><b>2020 - 2022</b><br>ICS<br>Completing ICS at Punjab College laid the foundation for my analytical and technical skills. This educational journey nurtured my logical thinking and problem-solving abilities, which I now apply to technical endeavors.</p>
+                </div>
+                <div class="resume-section skills-container">
+                    <h3>Skills</h3>
+                    <p><b>HTML:</b></p>
+                    <div class="progress-bar"><span style="width: 100%;" data-label="100%"></span></div>
+                    <p><b>CSS:</b></p>
+                    <div class="progress-bar"><span style="width: 90%;" data-label="90%"></span></div>
+                    <p><b>C++:</b></p>
+                    <div class="progress-bar"><span style="width: 85%;" data-label="85%"></span></div>
+                    <p><b>C:</b></p>
+                    <div class="progress-bar"><span style="width: 85%;" data-label="85%"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <h1 align="center">My Hobbies</h1>
+
+        <div class="flex-container">
+            <section>
+                <h2>Gym</h2>
+                <ul> 
+                    <li><b>Activities: </b> Weightlifting, cardio exercises, group classes, personal training.</li>
+                    <li><b>Benefits:</b> Improves physical health, enhances strength, reduces stress.</li>
+                </ul>  
+            </section>
+            <section>
+                <h2>Gaming</h2>
+                <ul> 
+                    <li><b>Activities: </b> Single-player games, multiplayer games, esports, streaming.</li>
+                    <li><b>Benefits:</b> Enhances problem-solving skills, offers entertainment and social interaction.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Coding</h2>
+                <ul> 
+                    <li><b>Activities: </b> Web and software development, app development, game development.</li>
+                    <li><b>Benefits:</b> Develops logical thinking, offers numerous career opportunities.</li>
+                </ul>
+            </section>
+        </div>
+
+        <section id="freelance">
+            <h2>I Am Available For Freelance</h2>
+            <a href="#" class="btn-hire">Hire Me</a>
+        </section>
+
+        <section id="contact-form">
+            <h1 align="center">Send Message</h1>
+            <form>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><b>Email:</b> <a href="mailto:abdurrehmanrajpoot001@gmail.com">abdurrehmanrajpoot001@gmail.com</a></p>
+                <p><b>Phone:</b> +923034563729</p>
+                <p><b>Address:</b> Islamabad, Pakistan</p>
+            </div>
+            <div class="menu-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="github.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <p align="center">&copy; 2024 Muhammad Abdur Rehman. All rights reserved.</p>
+    </footer>
+</body>
+</html>
